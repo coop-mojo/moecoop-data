@@ -1,0 +1,18 @@
+{
+    "type" : "array",
+    "items" : {
+        "type" : "object",
+        "required" : ["名前", "使用可能回数"],
+        "additionalProperties" : false,
+        "properties" : {
+            "名前" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "使用可能回数" : {
+                "type" : "number",
+                "minimum" : 1
+            }
+        }
+    }
+}
