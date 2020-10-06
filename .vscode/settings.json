@@ -4,7 +4,7 @@
             "fileMatch": [
                 "/resource/%E3%81%9D%E3%81%AE%E4%BB%96/*.json"
             ],
-            "url": "/docs/schema/その他.json"
+            "url": "/schemas/その他.json"
         }
     ]
 }
