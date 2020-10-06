@@ -5,6 +5,12 @@
                 "/resource/%E3%81%9D%E3%81%AE%E4%BB%96/*.json"
             ],
             "url": "/docs/schema/その他.json"
+        },
+        {
+            "fileMatch": [
+                "/resource/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0/*.json"
+            ],
+            "url": "/docs/schema/アイテム.json"
         }
     ]
 }
