@@ -1,0 +1,153 @@
+{
+    "type" : "array",
+    "items" : {
+        "type" : "object",
+        "required" : ["名前","英名","info","NPC売却価格","重さ","転送できる","スタックできる","種類"],
+        "additionalProperties" : false,
+        "properties" : {
+            "名前" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "英名" : {
+                "type" : "string"
+            },
+            "info" : {
+                "type" : "string"
+            },
+            "NPC売却価格" : {
+                "type" : "integer",
+                "minimum" : 0
+            },
+            "重さ" : {
+                "type" : "number",
+                "minimum" : 0,
+                "multipleOf" : 0.01
+            },
+            "転送できる" : {
+                "type" : "boolean"
+            },
+            "スタックできる" : {
+                "type" : "boolean"
+            },
+            "ペットアイテム" : {
+                "type" : "object",
+                "additionalProperties" : false,
+                "minProperties" : 1,
+                "maxProperties" : 1,
+                "properties" : {
+                    "食べ物" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "肉食物" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "草食物" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "飲み物" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "酒" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "薬" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "金属" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "石" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "骨" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "クリスタル" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "木" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "皮" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "紙" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "布" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "その他" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "不明" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "maximum" : 0,
+                        "multipleOf" : 0.1
+                    }
+                }
+            },
+            "特殊条件" : {
+                "type" : "array",
+                "minItems" : 1,
+                "uniqueItems" : true,
+                "items" : {
+                    "type" : "string",
+                    "enum" : ["NT","OP","CS","CR","PM","NC","NB","ND","CA","DL","TC","LO","AL","WA"]
+                }
+            },
+            "備考" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "種類" : {
+                "type" : "string",
+                "enum" : [
+                    "不明",
+                    "食べ物",
+                    "飲み物",
+                    "酒",
+                    "消耗品",
+                    "武器",
+                    "防具",
+                    "弾",
+                    "盾",
+                    "アセット",
+                    "その他"
+                ]
+            }
+        }
+    }
+}

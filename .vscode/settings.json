@@ -5,6 +5,15 @@
                 "/resource/%E3%81%9D%E3%81%AE%E4%BB%96/*.json"
             ],
             "url": "/schemas/その他.json"
+        },
+        {
+            "fileMatch": [
+                "/resource/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0/**/*.json",
+                
+                // microsoft/vscode#52651 のワークアラウンド 次の行
+                "/resource/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0/*.json"
+            ],
+            "url": "/schemas/アイテム.json"
         }
     ]
 }
