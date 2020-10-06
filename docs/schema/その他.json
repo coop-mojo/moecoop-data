@@ -10,7 +10,7 @@
                 "minLength" : 1
             },
             "使用可能回数" : {
-                "type" : "number",
+                "type" : "integer",
                 "minimum" : 1
             }
         }
