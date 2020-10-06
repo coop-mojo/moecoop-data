@@ -1,6 +1,5 @@
 {
     "type" : "array",
-    "uniqueItems" : true,
     "items" : {
         "type" : "object",
         "required" : ["名前","英名","info","NPC売却価格","重さ","転送できる","スタックできる","種類"],
