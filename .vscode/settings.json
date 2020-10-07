@@ -14,6 +14,13 @@
                 "/resource/%E3%82%A2%E3%82%A4%E3%83%86%E3%83%A0/*.json"
             ],
             "url": "/schemas/アイテム.json"
-        }
+        },
+        {
+            "fileMatch": [
+                "/resource/%E3%82%A2%E3%82%BB%E3%83%83%E3%83%88/*.json"
+            ],
+            "url": "/schemas/アセット.json"
+        },
+
     ]
 }
