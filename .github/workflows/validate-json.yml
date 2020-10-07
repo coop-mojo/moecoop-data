@@ -15,8 +15,6 @@ jobs:
 
       - name: Install Prerequirements
         run: |
-          sudo apt-get update
-          sudo apt-get install -y jq npm
           sudo npm install -g ajv-cli
 
       - name: Validate JSON files
