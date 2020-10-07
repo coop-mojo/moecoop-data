@@ -1,0 +1,33 @@
+{
+    "type" : "object",
+    "additionalProperties" : {
+        "type" : "object",
+        "required" : ["発生条件","必要なもの","報酬"],
+        "properties" : {
+            "発生条件" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "必要なもの" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : {
+                    "type" : "integer",
+                    "minimum" : 0
+                }
+            },
+            "報酬" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : {
+                    "type" : "integer",
+                    "minimum" : 0
+                }
+            },
+            "メモ" : {
+                "type" : "string",
+                "minLength" : 1
+            }
+        } 
+    }
+}
