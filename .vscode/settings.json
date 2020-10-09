@@ -32,6 +32,14 @@
                 "/resource/%E3%83%90%E3%82%A4%E3%83%B3%E3%83%80%E3%83%BC/*.json"
             ],
             "url": "/schemas/バインダー.json"
+        },
+        {
+            "fileMatch": [
+                "/resource/%E9%98%B2%E5%85%B7/**/*.json",
+                // microsoft/vscode#52651 のワークアラウンド 次の行
+                "/resource/%E9%98%B2%E5%85%B7/*.json"
+            ],
+            "url": "/schemas/防具.json"
         }
     ]
 }
