@@ -1,0 +1,20 @@
+name: Validate JSON files
+
+on:
+  push:
+    branches: [ master ]
+  pull_request: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install Prerequirements
+        run: |
+          sudo npm install -g ajv-cli
+
+      - name: Validate JSON files
+        run: ./test.sh
