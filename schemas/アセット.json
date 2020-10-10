@@ -1,0 +1,93 @@
+{
+    "type" : "array",
+    "items" : {
+        "type" : "object",
+        "required" : ["名前","耐久","素材","サイズ"],
+        "additionalProperties" : false,
+        "properties" : {
+            "名前" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "耐久" : {
+                "type" : "integer",
+                "minimum" : 0
+            },
+            "素材" : {
+                "type" : "string",
+                "enum" : [
+                    "銅",
+                    "青銅",
+                    "鉄",
+                    "鋼鉄",
+                    "銀",
+                    "金",
+                    "ミスリル",
+                    "オリハルコン",
+                    "綿",
+                    "絹",
+                    "動物の皮",
+                    "竜の皮",
+                    "プラント",
+                    "木",
+                    "トレント",
+                    "紙",
+                    "竹筒",
+                    "黒い竹",
+                    "骨",
+                    "石",
+                    "ガラス",
+                    "クリスタル",
+                    "コバルト",
+                    "カオス",
+                    "リペア ストーン",
+                    "不明"
+                ]
+            },
+            "サイズ" : {
+                "type" : "object",
+                "required" : ["幅"],
+                "minProperties" : 2,
+                "additionalProperties" : false,
+                "properties" : {
+                    "幅" : {
+                        "type" : "integer",
+                        "minimum" : 1
+                    },
+                    "奥行" : {
+                        "type" : "integer",
+                        "minimum" : 1
+                    },
+                    "高さ" : {
+                        "type" : "number",
+                        "multipleOf" : 0.01,
+                        "minimum" : 0
+                    }
+                }
+            },
+            "設置タイプ" : {
+                "type" : "string",
+                "enum" : ["床","壁","天井"]
+            },
+            "ストレージ" : {
+                "type" : "object",
+                "additionalProperties" : false,
+                "minProperties" : 1,
+                "properties" : {
+                    "通常" : {
+                        "type" : "number",
+                        "minimum" : 0
+                    },
+                    "SP" : {
+                        "type" : "number",
+                        "minimum" : 1
+                    }
+                }
+            },
+            "備考" : {
+                "type" : "string",
+                "minLength" : 1
+            }
+        }
+    }
+}
