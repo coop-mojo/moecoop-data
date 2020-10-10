@@ -48,6 +48,12 @@
         },
         {
             "fileMatch": [
+                "/resource/%E7%9B%BE/*.json"
+            ],
+            "url": "/schemas/盾.json"
+        },
+        {
+            "fileMatch": [
                 "/resource/%E9%98%B2%E5%85%B7/**/*.json",
                 // microsoft/vscode#52651 のワークアラウンド 次の行
                 "/resource/%E9%98%B2%E5%85%B7/*.json"

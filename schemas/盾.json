@@ -1,0 +1,700 @@
+{
+    "type":"array",
+    "minItems":1,
+    "items": {
+        "type": "object",
+        "required" : [
+            "名前",
+            "アーマークラス",
+            "回避",
+            "耐久",
+            "装備箇所",
+            "魔法チャージ",
+            "属性チャージ",
+            "必要スキル",
+            "素材"
+        ],
+        "additionalProperties": false,
+        "properties":{
+            "名前" : {
+                "type": "string",
+                "minLength": 1
+            },
+            "アーマークラス": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": false,
+                "properties": {
+                    "NG": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "minimum": 0
+                    },
+                    "劣化": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "minimum": 0
+                    },
+                    "HG": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "minimum": 0
+                    },
+                    "MG": {
+                        "type": "number",
+                        "multipleOf": 0.1,
+                        "minimum": 0
+                    }
+                }
+            },
+            "回避": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 100
+            },
+            "耐久": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "消耗タイプ": {
+                "const": "使用可能回数"
+            },
+            "装備箇所": {
+                "type": "string",
+                "enum": ["右手","左手"]
+            },
+            "追加効果" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : false,
+                "properties" : {
+                    "最大HP" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "最大ST" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "最大MP" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "最大重量" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "攻撃力" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "防御力" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "命中" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "回避" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "魔力" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "耐火属性" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "耐水属性" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "耐風属性" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "耐地属性" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "耐無属性" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "移動速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "泳ぎ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "攻撃ディレイ" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "魔法ディレイ" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+
+                    "料理ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "料理ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "料理グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "料理ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "醸造ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "醸造ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "醸造グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "醸造ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "鍛冶ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "鍛冶ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "鍛冶グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "鍛冶ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "木工ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "木工ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "木工グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "木工ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "裁縫ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "裁縫ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "裁縫グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "裁縫ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "装飾細工ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "装飾細工ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "装飾細工グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "装飾細工ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "複製ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "複製ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "複製グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "複製ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "薬調合ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "薬調合ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "薬調合グレードゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "薬調合ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "釣りゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "釣りヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "釣りゲージ長" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "美容ゲージ速度" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "美容ヒットゾーン" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "美容ゲージ滑り" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    
+                    "盗み補正" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "牙命中率補正" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "キック命中率補正" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "キック攻撃力補正" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+
+                    "BREATH" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "SEEING" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "HEARING" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    },
+                    "SMELLING" : {
+                        "type" : "number",
+                        "multipleOf" : 0.1
+                    }
+                }
+            },
+            "効果アップ" : {
+                "type" :"array",
+                "minItems" : 1,
+                "items" : {
+                    "type" : "string",
+                    "enum" : [
+                        "アンデッド系",
+                        "ドラゴン系",
+                        "悪魔系",
+                        "カオス系"
+                    ]
+                }
+            },
+            "付加効果" : {
+                "type" : "string"
+            },
+            "魔法チャージ": {
+                "type": "boolean"
+            },
+            "属性チャージ": {
+                "type": "boolean"
+            },
+            "必要スキル" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : false,
+                "properties" : {
+                    "筋力" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "着こなし" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "攻撃回避" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "生命" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "知能" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "持久力" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "精神力" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "集中力" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "呪文抵抗" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "落下耐性" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "水泳" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "死体回収" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "包帯" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "自然回復" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "採掘" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "伐採" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "収穫" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "釣り" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "解読" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "料理" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "鍛冶" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "醸造" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "木工" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "裁縫" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "薬調合" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "装飾細工" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "複製" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "栽培" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "美容" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "素手" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "刀剣" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "こんぼう" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "槍" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "銃器" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "弓" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "盾" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "投げ" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "牙" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "罠" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "キック" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "戦闘技術" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "酩酊" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "物まね" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "調教" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "破壊魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "回復魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "強化魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "神秘魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "召喚魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "死の魔法" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "魔法熟練" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "自然調和" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "暗黒命令" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "取引" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "シャウト" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "音楽" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "盗み" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "ギャンブル" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "パフォーマンス" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    },
+                    "ダンス" : {
+                        "type" : "number",
+                        "minimum" : 0,
+                        "multipleOf" : 0.1
+                    }
+                }
+            },
+            "備考": {
+                "type": "string",
+                "minLength": 1
+            },
+            "素材" : {
+                "type" : "string",
+                "enum" : [
+                    "銅",
+                    "青銅",
+                    "鉄",
+                    "鋼鉄",
+                    "銀",
+                    "金",
+                    "ミスリル",
+                    "オリハルコン",
+                    "綿",
+                    "絹",
+                    "動物の皮",
+                    "竜の皮",
+                    "プラント",
+                    "木",
+                    "トレント",
+                    "紙",
+                    "竹筒",
+                    "黒い竹筒",
+                    "骨",
+                    "石",
+                    "ガラス",
+                    "クリスタル",
+                    "コバルト",
+                    "カオス",
+                    "リペア ストーン",
+                    "不明"
+                ]
+            }
+        }
+
+    }
+    
+}
