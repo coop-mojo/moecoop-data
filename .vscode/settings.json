@@ -35,6 +35,12 @@
         },
         {
             "fileMatch": [
+                "/resource/%E5%BC%BE/*.json"
+            ],
+            "url": "/schemas/弾.json"
+        },
+        {
+            "fileMatch": [
                 "/resource/%E9%98%B2%E5%85%B7/**/*.json",
                 // microsoft/vscode#52651 のワークアラウンド 次の行
                 "/resource/%E9%98%B2%E5%85%B7/*.json"
