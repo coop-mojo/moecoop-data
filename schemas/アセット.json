@@ -13,9 +13,6 @@
                 "type" : "integer",
                 "minimum" : 0
             },
-            "消耗タイプ" : {
-                "const" : "使用可能回数"
-            },
             "素材" : {
                 "type" : "string",
                 "enum" : [
