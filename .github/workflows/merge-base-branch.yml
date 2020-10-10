@@ -1,0 +1,43 @@
+# https://qiita.com/hkusu/items/425f58463023a53ebe5f
+name: Merge base branch
+
+on:
+  issue_comment:
+    types: [created, edited]
+
+env:
+  LAUNCH_COMMAND: '@github-actions merge base branch' # 大文字小文字は問わない
+
+jobs:
+  merge:
+    name: merge
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Run GitHub API
+        # jobの実行条件ではenvが使えないのでここで判定
+        if: github.event.issue.state == 'open' && github.event.issue.pull_request != null && contains(github.event.comment.body, env.LAUNCH_COMMAND) == true && (github.event.action != 'edited' || (github.event.action == 'edited' && contains(github.event.changes.body.from, env.LAUNCH_COMMAND) == false))
+        run: |
+          # プルリクエストの詳細を取得
+          res=$(curl -X GET \
+                     -H "Content-Type: application/json" \
+                     -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                     https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.issue.number }})
+          head_sha=$(echo $res | tr -d '[:cntrl:]' | jq -r '.head.sha')
+
+          # 参考: https://developer.github.com/v3/pulls/#update-a-pull-request-branch
+          res=$(curl -X PUT \
+               -H "Content-Type: application/json" \
+               -H "Authorization: token ${{ secrets.PERSONAL_ACCESS_TOKEN }}" \
+               -H "Accept: application/vnd.github.lydian-preview+json" \
+               -d "{ \"expected_head_sha\": \"$head_sha\" }" \
+               https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.issue.number }}/update-branch)
+          message=$(echo $res | tr -d '[:cntrl:]' | jq -r '.message')
+
+          # 結果をプルリクにコメント
+          if [[ $message != 'null' ]]; then
+            curl -X POST \
+                 -H "Content-Type: application/json" \
+                 -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+                 -d "{ \"body\": \"$message\" }" \
+                 https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.issue.number }}/comments
+          fi

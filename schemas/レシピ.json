@@ -1,0 +1,147 @@
+{
+    "type" : "array",
+    "items" : {
+        "type" : "object",
+        "required" : ["名前","材料","生成物","テクニック","スキル","レシピが必要","ギャンブル型","ペナルティ型"],
+        "additionalProperties": false,
+        "properties" : {
+            "名前" : {
+                "type" : "string",
+                "minLength" : 1
+            },
+            "材料" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : {
+                    "type" : "integer",
+                    "minimum" : 1
+                }
+            },
+            "特殊消費" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : {
+                    "type" : "string",
+                    "enum" : [
+                        "消失",
+                        "消費",
+                        "未消費",
+                        "失敗時消失"
+                    ]
+                }
+            },
+            "生成物" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : {
+                    "type" : "integer",
+                    "minimum" : 1
+                }
+            },
+            "テクニック" : {
+                "type" : "array",
+                "minItems" : 1,
+                "uniqueItems" : true,
+                "items" : {
+                    "type" : "string",
+                    "enum" : [
+                        "料理(焼く)",
+                        "料理(切る)",
+                        "魚拓",
+                        "醸造",
+                        "精錬",
+                        "鍛冶",
+                        "大工(切る)",
+                        "大工(組立)",
+                        "大工(弓作成)",
+                        "織布",
+                        "洋裁",
+                        "毛刈り",
+                        "装飾合成",
+                        "複製",
+                        "彫刻",
+                        "薬調合",
+                        "合成",
+                        "搾乳"
+                    ]
+                }
+            },
+            "スキル" : {
+                "type" : "object",
+                "minProperties" : 1,
+                "additionalProperties" : false,
+                "properties" : {
+                    "料理" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "醸造" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "鍛冶" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "木工" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "裁縫" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "装飾細工" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "複製" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "薬調合" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "罠" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "収穫" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    },
+                    "神秘魔法" : {
+                        "type" : "number",
+                        "multipleOf" : 0.5,
+                        "minimum" : 0
+                    }
+                }
+            },
+            "レシピが必要" : {
+                "type" : "boolean"
+            },
+            "ギャンブル型" : {
+                "type" : "boolean"
+            },
+            "ペナルティ型" : {
+                "type" : "boolean"
+            },
+            "備考" : {
+                "type" : "string",
+                "minLength" : 1
+            }
+        }
+    }
+}
+
