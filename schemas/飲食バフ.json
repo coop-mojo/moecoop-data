@@ -1,0 +1,286 @@
+{
+    "type": "array",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "required": ["名前","効果","効果時間","グループ"],
+        "properties": {
+            "名前": {
+                "type": "string",
+                "minLength": 1
+            },
+            "効果": {
+                "type" : "object",
+                "additionalProperties" : false,
+                "properties" : {
+                    "HP": {
+                        "type": "integer"
+                    },
+                    "ST": {
+                        "type": "integer"
+                    },
+                    "MP": {
+                        "type": "integer"
+                    },
+                    "潤喉度": {
+                        "type": "integer"
+                    },
+                    "シャウト射程": {
+                        "type": "integer"
+                    },
+                    "音楽射程": {
+                        "type": "integer"
+                    },
+                    "生産ゲージ 滑り": {
+                        "type": "integer"
+                    },
+                    "生産ゲージ 速度": {
+                        "type": "integer"
+                    },
+                    "生産ヒットゾーン": {
+                        "type": "integer"
+                    },
+                    "移動詠唱速度": {
+                        "type": "integer"
+                    },
+                    "詠唱時間": {
+                        "type": "integer"
+                    },
+                    "アイテム重量": {
+                        "type": "integer"
+                    },
+                    "アタックディレイ": {
+                        "type": "integer"
+                    },
+                    "消費MP":  {
+                        "type": "integer"
+                    },
+
+                    "最大HP" : {
+                        "type" : "integer"
+                    },
+                    "最大ST" : {
+                        "type" : "integer"
+                    },
+                    "最大MP" : {
+                        "type" : "integer"
+                    },
+                    "最大重量" : {
+                        "type" : "integer"
+                    },
+                    "攻撃力" : {
+                        "type" : "integer"
+                    },
+                    "防御力" : {
+                        "type" : "integer"
+                    },
+                    "命中" : {
+                        "type" : "integer"
+                    },
+                    "回避" : {
+                        "type" : "integer"
+                    },
+                    "魔力" : {
+                        "type" : "integer"
+                    },
+                    "耐火属性" : {
+                        "type" : "integer"
+                    },
+                    "耐水属性" : {
+                        "type" : "integer"
+                    },
+                    "耐風属性" : {
+                        "type" : "integer"
+                    },
+                    "耐地属性" : {
+                        "type" : "integer"
+                    },
+                    "耐無属性" : {
+                        "type" : "integer"
+                    },
+                    "移動速度" : {
+                        "type" : "integer"
+                    },
+                    "泳ぎ速度" : {
+                        "type" : "integer"
+                    },
+                    "攻撃ディレイ" : {
+                        "type" : "integer"
+                    },
+                    "魔法ディレイ" : {
+                        "type" : "integer"
+                    },
+
+                    "料理ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "料理ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "料理グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "料理ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "醸造ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "醸造ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "醸造グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "醸造ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "鍛冶ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "鍛冶ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "鍛冶グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "鍛冶ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "木工ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "木工ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "木工グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "木工ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "裁縫ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "裁縫ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "裁縫グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "裁縫ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "装飾細工ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "装飾細工ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "装飾細工グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "装飾細工ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "複製ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "複製ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "複製グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "複製ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "薬調合ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "薬調合ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "薬調合グレードゾーン" : {
+                        "type" : "integer"
+                    },
+                    "薬調合ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    "釣りゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "釣りヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "釣りゲージ長" : {
+                        "type" : "integer"
+                    },
+                    "美容ゲージ速度" : {
+                        "type" : "integer"
+                    },
+                    "美容ヒットゾーン" : {
+                        "type" : "integer"
+                    },
+                    "美容ゲージ滑り" : {
+                        "type" : "integer"
+                    },
+                    
+                    "盗み補正" : {
+                        "type" : "integer"
+                    },
+                    "牙命中率補正" : {
+                        "type" : "integer"
+                    },
+                    "キック命中率補正" : {
+                        "type" : "integer"
+                    },
+                    "キック攻撃力補正" : {
+                        "type" : "integer"
+                    },
+
+                    "BREATH" : {
+                        "type" : "integer"
+                    },
+                    "SEEING" : {
+                        "type" : "integer"
+                    },
+                    "HEARING" : {
+                        "type" : "integer"
+                    },
+                    "SMELLING" : {
+                        "type" : "integer"
+                    }
+                }
+            },
+            "その他効果": {
+                "type": "string",
+                "minLength": 1
+            },
+            "効果時間": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "グループ": {
+                "type": "string",
+                "enum": [
+                    "A",
+                    "B",
+                    "B1",
+                    "B2",
+                    "C",
+                    "C1",
+                    "C2",
+                    "D",
+                    "D1",
+                    "D2",
+                    "D3",
+                    "D4",
+                    "E",
+                    "F",
+                    "その他"
+                ]
+            }
+        }
+    }
+}
