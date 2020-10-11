@@ -48,6 +48,12 @@
         },
         {
             "fileMatch": [
+                "/resource/%E7%9B%BE/*.json"
+            ],
+            "url": "/schemas/盾.json"
+        },
+        {
+            "fileMatch": [
                 "/resource/%E6%AD%A6%E5%99%A8/*.json"
             ],
             "url": "/schemas/武器.json"
