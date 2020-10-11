@@ -53,6 +53,12 @@
                 "/resource/%E9%98%B2%E5%85%B7/*.json"
             ],
             "url": "/schemas/防具.json"
+        },
+        {
+            "fileMatch": [
+                "/resource/%E9%A3%B2%E3%81%BF%E7%89%A9/*.json"
+            ],
+            "url": "/schemas/飲み物.json"
         }
     ]
 }
