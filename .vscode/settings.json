@@ -77,6 +77,12 @@
                 "/resource/%E9%A3%9F%E3%81%B9%E7%89%A9/*.json"
             ],
             "url": "/schemas/食べ物.json"
+        },
+        {
+            "fileMatch": [
+                "/resource/%E9%A3%B2%E9%A3%9F%E3%83%90%E3%83%95/*.json",
+            ],
+            "url": "/schemas/飲食バフ.json"
         }
     ]
 }
