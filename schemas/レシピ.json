@@ -137,6 +137,11 @@
             "ペナルティ型" : {
                 "type" : "boolean"
             },
+            "同時作成回数上限" : {
+                "type" : "integer",
+                "minimum": 1,
+                "maximum": 100
+            },
             "備考" : {
                 "type" : "string",
                 "minLength" : 1
