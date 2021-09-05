@@ -238,6 +238,15 @@
                     "キック攻撃力補正" : {
                         "type" : "integer"
                     },
+                    "棍棒ディレイ" : {
+                        "type" : "integer"
+                    },
+                    "パフォーマンスディレイ": {
+                        "type" : "integer"
+                    },
+                    "シャウトディレイ": {
+                        "type": "integer"
+                    },
 
                     "BREATH" : {
                         "type" : "integer"
