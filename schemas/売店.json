@@ -20,7 +20,8 @@
                 "enum" : [
                     "Present Age",
                     "War Age",
-                    "Ancient Age"
+                    "Ancient Age",
+                    "QoAジャスパー"
                 ]
             },
             "エリア" : {
